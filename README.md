@@ -40,7 +40,7 @@
 | `git diff` | compare working directory to staging area |  
 | `git push` | to push files to remote repository |
 | `git ls-files` | to see whether any files might contain sensitive information are in repo |
-| `git clone` | to copy a remote repo locally |
+| `git clone <repo-link>` | to copy a remote repo locally |
 | `git pull` | to get remote changes locally |
 | `git branch` | to see a list of local branches |
 | `git checkout -b <branch-name>` | to create and switch into a new branch |

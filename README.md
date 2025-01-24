@@ -111,15 +111,15 @@ Now your connection is set up <br>
 *You will be prompted to Login or to Use a Token*
 
 #### For a Personal Access Token 
-    1. Go into your menu by clicking on your profile in the top right corner
-    2. Click on settings
-    3. On the left, at the bottom, click on Developer Settings
-    4. Click on Personal Access Tokens to expand the drop down
-    5. Click on Tokens (classic)
-    5. Generate a new token
-    6. Specify what the token is for 
-    7. Select repo for scopes
-    8. Copy the token and save it! Git will not give you access again. 
-    9. Use the Personal Access Token to establish a connection from your machine to your github account
+- Go into your menu by clicking on your profile in the top right corner
+- Click on settings
+- On the left, at the bottom, click on Developer Settings
+- Click on Personal Access Tokens to expand the drop down
+- Click on Tokens (classic)
+- Generate a new token
+- Specify what the token is for 
+- Select repo for scopes
+- Copy the token and save it! Git will not give you access again. 
+- Use the Personal Access Token to establish a connection from your machine to your github account
 
 10. Refresh your browser to see the changes in your remote repository 

@@ -20,6 +20,9 @@
 | `git commit -m"<commit message>"` | to commit files with a message |  
 | `git diff` | compare working directory to staging area |  
 | `git push` | to push files to remote repository |
+| `git ls-files` | to see whether any files might contain sensitive information are in repo |
+| `git clone` | to copy a remote repo locally |
+| `git pull` | to get remote changes locally |
 
 
 ### What is version control?
@@ -123,3 +126,6 @@ Now your connection is set up <br>
 - Use the Personal Access Token to establish a connection from your machine to your github account
 
 10. Refresh your browser to see the changes in your remote repository 
+
+### Recommended 
+Set up SSH keys by following this [Documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)

@@ -70,7 +70,7 @@ Follow the steps to set up your account
 `touch .gitignore` <br>
     This is for files that are part of your local repository that you do not want stored on your remote/public repository i.e. environment files.
 
-# Staging and Committing 
+### Staging and Committing 
 Git is a system based on an opt-in approach which is utilised by the staging area. 
 
 1. To see what files are in your working directory use <br>
@@ -93,7 +93,7 @@ See [this link](https://www.freecodecamp.org/news/how-to-write-better-git-commit
 5. _Optional_: Use <br>
 `git diff` <br>to show the difference between the latest commits.
 
-## Connecting Repositories
+### Connecting Repositories
 
 1. Click on the + icon in the top right corner
 2. From the dropdown select 'New Repository'
@@ -129,3 +129,4 @@ Now your connection is set up <br>
 
 ### Recommended 
 Set up SSH keys by following this [Documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+

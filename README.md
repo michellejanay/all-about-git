@@ -29,7 +29,7 @@
 | `ls` | list all files/folders | 
 | `ls -al` | to see all files/folders including hidden with more detail | 
 | `cd` | change directory | 
-| `cd..` | move back one directory | 
+| `cd ..` | move back one directory | 
 | `mkdir <folder-name>` | create a new directory |
 | `touch <file-name>`| to create a file |  
 | `git init` | initialize a git repository | 

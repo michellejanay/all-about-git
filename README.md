@@ -1,7 +1,26 @@
-# All about Git 
+# All about Git <a name="all-about-git"></a>
 ![Git Cat](images/github-mark.png)
 
-## Useful Terminal Commands
+## Table of Contents
+- [All About Git](#all-about-git)
+    - [Useful Terminal Commands](#useful-terminal-commands)
+    - [What is version control?](#what-is-version-control)
+    - [What is Git?](#what-is-git)
+    - [Installing Git](#installing-git)
+    - [Account Setup](#account-setup)
+    - [Creating a Repository](#creating-a-repo)
+    - [Staging and Committing](#staging-and-commiting)
+    - [Connecting Repositories](#connecting-repos)
+    - [Personal Access Tokens](#pat)
+    - [SSH](#recommended)
+- [Collaborating With Git](#collaborating-with-git)
+    - [Utilizing Branches](#utilizing-branches)
+    - [Branch Rules](#branch-rules)
+    - [Creating Branches](#creating-branches)
+    - [Specify Default Branch](#specify-default-branch)
+    - [Pull Requests](#pull-requests)
+
+## Useful Terminal Commands <a name="useful-terminal-commands"></a>
 
 | command | uses | 
 |---------|---------|
@@ -23,15 +42,20 @@
 | `git ls-files` | to see whether any files might contain sensitive information are in repo |
 | `git clone` | to copy a remote repo locally |
 | `git pull` | to get remote changes locally |
+| `git branch` | to see a list of local branches |
+| `git checkout -b <branch-name>` | to create and switch into a new branch |
+| `git checkout <branch-name>` | to switch to another branch |
+| `git push origin <branch-name>` | to push files into branch |
+| `git fetch` | to get remote branches locally |
+| `git branch -D <branch-name>` | to delete local branch |
 
-
-### What is version control?
+### What is version control? <a name="what-is-version-control"></a>
 **Version Control** is used for any situation where you are creating content. It assists in keeping track of all the changes to a document, allowing you to go back to earlier versions. It can provide an off-site copy of data and it supports collaboration. 
 
-### What is Git?
+### What is Git? <a name="what-is-git"></a>
 **Git** is a version control system. It is fast, modern and fully-featured, while also being open source and free. Git also allows for distribution, where you can have local and remote copies of files.
 
-### Installing Git 
+### Installing Git  <a name="installing-git"></a>
 1. Go to the [Git Website](https://git-scm.com/)
 
 2. Go to download link for your operating system
@@ -43,12 +67,12 @@
 
 _See [Documentation](https://git-scm.com/doc) for more details_
 
-### Account setup
+### Account setup <a name="account-setup"></a>
 Go to [Github](https://github.com)
 Click the 'Sign up' button in the top right corner
 Follow the steps to set up your account
 
-### Creating a Repository 
+### Creating a Repository <a name="creating-a-repo"></a>
 
 1. In the GitBash Terminal Print your working directory using <br>
 `pwd`
@@ -70,7 +94,7 @@ Follow the steps to set up your account
 `touch .gitignore` <br>
     This is for files that are part of your local repository that you do not want stored on your remote/public repository i.e. environment files.
 
-### Staging and Committing 
+### Staging and Committing <a name="staging-and-commiting"></a>
 Git is a system based on an opt-in approach which is utilised by the staging area. 
 
 1. To see what files are in your working directory use <br>
@@ -93,7 +117,7 @@ See [this link](https://www.freecodecamp.org/news/how-to-write-better-git-commit
 5. _Optional_: Use <br>
 `git diff` <br>to show the difference between the latest commits.
 
-### Connecting Repositories
+### Connecting Repositories <a name="connecting-repos"></a>
 
 1. Click on the + icon in the top right corner
 2. From the dropdown select 'New Repository'
@@ -113,7 +137,7 @@ Now your connection is set up <br>
 
 *You will be prompted to Login or to Use a Token*
 
-#### For a Personal Access Token 
+#### For a Personal Access Token <a name="pat"></a>
 - Go into your menu by clicking on your profile in the top right corner
 - Click on settings
 - On the left, at the bottom, click on Developer Settings
@@ -127,6 +151,53 @@ Now your connection is set up <br>
 
 10. Refresh your browser to see the changes in your remote repository 
 
-### Recommended 
+### Recommended <a name="recommended"></a>
 Set up SSH keys by following this [Documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+## Collaborating with Git <a name="collaborating-with-git"></a>
+
+### Initial Setup 
+- Create a Repository that you wish to collaborate in 
+- On the repo page, click settings
+- In the left hand menu, click collaborators 
+- Add collaborators by username, full name, or email
+- Click invite collaborators 
+_Collaborators must accept invite, they will be listed in the collaborators system_
+- Clone repository using `git clone` with the HTTPS or SSH link in the terminal 
+- `cd` into the repository
+
+### Utilizing Branches <a name="utilizing-branches"></a>
+Branches are used to manage parrallel working. 
+The main branch is not intended to day-to-day development, but for production ready development. Instead we use a development branch alongside feature branches while building up a project.
+
+#### We can set branch protection rules for main/development branch. <a name="branch-rules"></a>
+- For the main/dev branch, in the repo, go to settings and click on Branches from the left side menu. 
+- In Branch name pattern, type the name of the branch where you want to set rules. 
+- Select require pull requests before merging and require approvals.
+
+#### Creating New Branches <a name="creating-branches"></a>
+To create a new branch use <br>
+`git checkout -b <branch-name>`
+This will create a new branch and move you into it.<br> 
+Use <br>
+`git push origin <branch-name>` to add branch to Remote repository
+
+#### Specify the Default branch <a name="specify-default-branch"></a>
+In Repository settings click on General
+Change default branch to dev branch
+
+
+### Pull Requests <a name="pull-requests"></a>
+Pulll requests are used to merge the working branch into the main/developement branch
+
+- On Github go into the branch by selecting the branch name in the dropdown of the repository
+- Click on the highlighted notification that says '<#> commits ahead of main/dev'
+- Click create Pull Request
+- Assign reviewers on left hand side
+- Once approved click 'Merge'
+- Click 'confirm merge'
+- Delete branch
+- Switch to main/dev branch locally 
+- run `git pull` in terminal 
+- run `git branch -D <branch-name>` to delete branch locally
 
